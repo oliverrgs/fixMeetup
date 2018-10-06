@@ -5,7 +5,7 @@ Display 10x as many results at one time
 
 copypaste this into the console
 
-setInterval(() => {
+	setInterval(() => {
 
 	$(".text--labelSecondary:first-child").toggle(false);
 	
@@ -19,6 +19,6 @@ setInterval(() => {
 
 	$("#C_pageBody").css("width","1600px");
 	
-$(".mt-alert").toggle(false);
+	$(".mt-alert").toggle(false);
 
-},5000);
+	},1000);
