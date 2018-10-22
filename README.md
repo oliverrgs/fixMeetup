@@ -30,6 +30,18 @@ copypaste this into the console
 		}
 	} 
 	function fixMeetup(){
+		var day = "";
+		$("li").each(function(iii,obbbj){
+			if($(obbbj).is(".date-indicator")){
+				day = $(obbbj).text().trim().substr(0,3)+"__ ";
+			}
+			if($(obbbj).is(".row.event-listing")){
+				if(!$(obbbj).hasClass("appended")){
+					$(obbbj).addClass("appended");
+					$(obbbj).prepend(day);
+				}
+			}
+		});
 		$(".text--labelSecondary:first-child").toggle(false);
 		$(".event-listing").css("padding","0px");
 		$(".chunk").removeClass("chunk")
