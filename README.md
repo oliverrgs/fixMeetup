@@ -25,7 +25,7 @@ copypaste this into the console
 			for(var i = 0;i<10;i++){
 				setTimeout(()=>{
 					fixMeetup();
-				},i*100);
+				},i*300);
 			}
 		}
 	} 
@@ -50,8 +50,5 @@ copypaste this into the console
 		$("#C_pageBody").css("width","1600px");
 		$(".mt-alert").toggle(false);
 	}
-	setInterval(() => {
-		fixMeetup();
-	},10000);
 
 	fixMeetup();
