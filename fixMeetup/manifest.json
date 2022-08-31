@@ -1,0 +1,23 @@
+{
+
+  "description": "Minimal interface for meetup!",
+  "manifest_version": 2,
+  "name": "FixMeetup",
+  "version": "1.5",
+  "homepage_url": "https://github.com/oliverrgs/fixMeetup",
+  "icons": {
+    "48": "icons/fix48.png"
+  },
+
+  "permissions": [
+    "*://www.meetup.com/*",
+    "*://meetup.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.meetup.com/*"],
+      "js": ["fixMeetup.js"]
+    }
+  ]
+
+}
