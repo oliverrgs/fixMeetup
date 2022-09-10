@@ -16,6 +16,10 @@ display:none;
 margin-bottom:3px;
 }
 
+.flex > .w-full {
+	width:60vw !important;
+	max-width: 60vw !important;
+ }
  .flex.flex-col .md:flex-row p, .flex.flex-col .md:flex-row div {
   display:inline-block;
 }
@@ -24,6 +28,9 @@ margin-bottom:3px;
   white-space: nowrap;
   overflow: hidden;
   margin-right: 10px;
+}
+.flex.flex-row-reverse.flex-1.overflow-hidden > .bg-transparent {
+	display:none;
 }
 
  .flex.flex-col div  {
@@ -58,9 +65,20 @@ display:none;
  .mb-10 {
 margin-bottom: .2rem
 }
+#main_footer {display:none;}
 `
 setTimeout(()=>{
-var styleSheet = document.createElement("style")
-styleSheet.innerText = styles
-document.head.appendChild(styleSheet)
+	var styleSheet = document.createElement("style")
+	styleSheet.innerText = styles
+	document.head.appendChild(styleSheet)
+	let main = document.getElementById("main") 
+	if(main){
+	 document.getElementById("main").classList="" 
+	}
 },1000);
+setTimeout(()=>{
+	let expandyy = document.querySelector(".text-sm.text-viridian.font-medium.flex.items-center.gap-x-2");
+	if(expandyy && expandyy.getAttribute("data-element-name") == "eventSearchMap-expandButton"){
+		expandyy.click()
+	}
+},3000);
